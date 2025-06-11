@@ -1,4 +1,4 @@
 
 # Curso Kubernets
 
- - Ambiente docker para exercícios: [link](curso-kubernets/Readme.md)
+ - Ambiente docker para exercícios: [link](ambiente-docker/Readme.md)
