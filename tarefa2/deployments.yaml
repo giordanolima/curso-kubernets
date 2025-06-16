@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: giordano-tarefa2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: giordano-tarefa2
+  template:
+    metadata:
+      labels:
+        app: giordano-tarefa2
+    spec:
+      containers:
+      - name: giordano-tarefa2
+        image: giordanolima/curso-kubernetes:tarefa2
+        command: ["sleep", "3600"]
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+          requests:
+            memory: "32Mi"
+            cpu: "50m"
