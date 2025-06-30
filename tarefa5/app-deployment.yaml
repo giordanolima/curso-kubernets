@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meuapp-deployment
+  labels:
+    app: meuapp
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: meuapp
+  template:
+    metadata:
+      labels:
+        app: meuapp
+    spec:
+      containers:
+      - name: meuapp
+        image: nginx:1.28.0
+        ports:
+        - containerPort: 80
